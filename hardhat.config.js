@@ -4,6 +4,8 @@
 
 //const { ethers } = require("hardhat");
 require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-ethers");
+require("@openzeppelin/hardhat-upgrades");
 
 // Go to https://www.alchemyapi.io, sign up, create
 // a new App in its dashboard, and replace "KEY" with its key
@@ -17,7 +19,7 @@ const ROPSTEN_PRIVATE_KEY =
   "0543cd13d1b272a550ab23c0dfc7aa3d3643d3814b4e4fc5575395a6d16f8b41";
 
 module.exports = {
-  solidity: "0.8.0",
+  solidity: "0.8.10",
   networks: {
     ropsten: {
       url: `https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,

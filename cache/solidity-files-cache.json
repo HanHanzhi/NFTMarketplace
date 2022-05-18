@@ -183,8 +183,8 @@
       ]
     },
     "/Users/han/hardhat-tutorial/contracts/MyHardhatToken.sol": {
-      "lastModificationDate": 1652779873391,
-      "contentHash": "97196112108107d3c0ce1a89ea8cbab4",
+      "lastModificationDate": 1652860718306,
+      "contentHash": "5daf2c23a0d0c91c0aa96eba3205598d",
       "sourceName": "contracts/MyHardhatToken.sol",
       "solcConfig": {
         "version": "0.8.10",
@@ -200,7 +200,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ],
               "": [
                 "ast"
@@ -210,18 +211,20 @@
         }
       },
       "imports": [
-        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+        "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
       ],
       "versionPragmas": [
-        "^0.8.0"
+        "^0.8.10"
       ],
       "artifacts": [
         "MyHardhatToken"
       ]
     },
     "/Users/han/hardhat-tutorial/contracts/MyHardhatTokenV2.sol": {
-      "lastModificationDate": 1652779869136,
-      "contentHash": "c74193f28d8807dfe9e27e78d2f297fa",
+      "lastModificationDate": 1652856811093,
+      "contentHash": "b57c2cc43158386f7b98068f2209b1cf",
       "sourceName": "contracts/MyHardhatTokenV2.sol",
       "solcConfig": {
         "version": "0.8.10",
@@ -237,7 +240,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ],
               "": [
                 "ast"
@@ -248,10 +252,11 @@
       },
       "imports": [
         "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol"
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
       ],
       "versionPragmas": [
-        "^0.8.0"
+        "^0.8.10"
       ],
       "artifacts": [
         "MyHardhatTokenV2"
@@ -275,7 +280,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ],
               "": [
                 "ast"
@@ -315,7 +321,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ],
               "": [
                 "ast"
@@ -353,7 +360,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ],
               "": [
                 "ast"
@@ -388,7 +396,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ],
               "": [
                 "ast"
@@ -425,7 +434,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ],
               "": [
                 "ast"
@@ -445,7 +455,7 @@
       ]
     },
     "/Users/han/hardhat-tutorial/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
-      "lastModificationDate": 1652773876050,
+      "lastModificationDate": 1652854484655,
       "contentHash": "be27cb63ce8e469db3306a210450385f",
       "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
       "solcConfig": {
@@ -462,7 +472,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ],
               "": [
                 "ast"
@@ -482,7 +493,7 @@
       ]
     },
     "/Users/han/hardhat-tutorial/node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol": {
-      "lastModificationDate": 1652773875996,
+      "lastModificationDate": 1652854441690,
       "contentHash": "b70d2e0552ab1f44f7e44b5f8379c358",
       "sourceName": "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
       "solcConfig": {
@@ -499,7 +510,8 @@
                 "evm.bytecode",
                 "evm.deployedBytecode",
                 "evm.methodIdentifiers",
-                "metadata"
+                "metadata",
+                "storageLayout"
               ],
               "": [
                 "ast"

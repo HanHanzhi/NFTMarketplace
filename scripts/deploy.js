@@ -1,4 +1,4 @@
-const { ethers } = require("hardhat");
+const { ethers, upgrades } = require("hardhat");
 async function main() {
   const [deployer] = await ethers.getSigners();
 
@@ -10,7 +10,12 @@ async function main() {
 
   // make sure to replace the "GoofyGoober" reference with your own ERC-20 name!
   const Token = await ethers.getContractFactory("MyHardhatToken");
-  const token = await Token.deploy();
+
+  const token = await upgrades.deployProxy(Token, {
+    initializer: "initialize",
+  });
+
+  await token.deployed();
 
   console.log("Token address:", token.address);
 }
