@@ -30,6 +30,7 @@ module.exports = {
     },
   },
   etherscan: {
+    // API key for Etherscan
     apiKey: ETHERSCAN_API_KEY,
   },
 };

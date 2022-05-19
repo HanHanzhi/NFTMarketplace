@@ -28,3 +28,5 @@ contract MyHardhatToken is Initializable, ERC20Upgradeable, UUPSUpgradeable, Own
 	function _authorizeUpgrade(address) internal override onlyOwner {}
 
 }
+
+//0xE4C3Ce6302e7c542dB60bD2761B4c6Dff0C59730
