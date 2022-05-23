@@ -22,12 +22,17 @@
     },
     {
       "address": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
-      "txHash": "0x4d0773371da00ef56b5c7da8f47c8426d0eb1490b21672266982b455e6fa69e3",
+      "txHash": "0xe01c42a4d3dd2fa8f6876ecaf7520895f0c4143ae06246d3790866dacb9b22c1",
       "kind": "uups"
     },
     {
       "address": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
-      "txHash": "0xaa80f0659c3553b72e27ce349a28b4272cef97267708d4fbb1ed7d138ad6402a",
+      "txHash": "0x3095b9ee540f98ef0ca929643ddca1b468b164bc52faf463c2e8081656e74eca",
+      "kind": "uups"
+    },
+    {
+      "address": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+      "txHash": "0x1df1940c42e4b68fae2d5e271da8feb0512dd04cb1e36e33770e4a3377b39b06",
       "kind": "uups"
     }
   ],
