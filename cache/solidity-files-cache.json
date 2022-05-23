@@ -721,8 +721,8 @@
       ]
     },
     "/Users/han/hardhat-tutorial/contracts/MyHardhatTokenV3.sol": {
-      "lastModificationDate": 1652944342365,
-      "contentHash": "6e47eda3a4ace7c554d32476645f0f62",
+      "lastModificationDate": 1653202500379,
+      "contentHash": "1aed23101f4b55ba0ce8083f6c502d76",
       "sourceName": "contracts/MyHardhatTokenV3.sol",
       "solcConfig": {
         "version": "0.8.10",
@@ -756,6 +756,44 @@
       ],
       "artifacts": [
         "MyHardhatTokenV3"
+      ]
+    },
+    "/Users/han/hardhat-tutorial/contracts/MyHardhatTokenV4.sol": {
+      "lastModificationDate": 1653202500379,
+      "contentHash": "6433f935fd0cd2864650f1c2c180dcf3",
+      "sourceName": "contracts/MyHardhatTokenV4.sol",
+      "solcConfig": {
+        "version": "0.8.10",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./MyHardhatTokenV3.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.10"
+      ],
+      "artifacts": [
+        "MyHardhatTokenV4"
       ]
     }
   }

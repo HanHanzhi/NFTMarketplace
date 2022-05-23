@@ -2,7 +2,7 @@ pragma solidity ^0.8.10;
 
 import "./MyHardhatTokenV2.sol";
 
-/// @author HY Lim 2022
+
 contract MyHardhatTokenV3 is MyHardhatTokenV2 {
     
 
