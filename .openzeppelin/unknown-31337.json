@@ -6,6 +6,11 @@
   },
   "proxies": [
     {
+      "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+      "txHash": "0x49f813bf9c45c2a2ededbb1801d843dde94b72bffab510d4b803f851ab89b7ba",
+      "kind": "uups"
+    },
+    {
       "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
       "txHash": "0xb9a0e3f67f0720a2abfa31b3c411f67560ffb9e72405917144592e6c6ce06361",
       "kind": "uups"
@@ -16,8 +21,13 @@
       "kind": "uups"
     },
     {
-      "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
-      "txHash": "0x49f813bf9c45c2a2ededbb1801d843dde94b72bffab510d4b803f851ab89b7ba",
+      "address": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
+      "txHash": "0x4d0773371da00ef56b5c7da8f47c8426d0eb1490b21672266982b455e6fa69e3",
+      "kind": "uups"
+    },
+    {
+      "address": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
+      "txHash": "0xaa80f0659c3553b72e27ce349a28b4272cef97267708d4fbb1ed7d138ad6402a",
       "kind": "uups"
     }
   ],
