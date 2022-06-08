@@ -23,7 +23,7 @@ describe("MyToken", function () {
     });
   });
 
-  describe("Transaction", function () {
+  /*describe("Transaction", function () {
     it("Should transfer tokens between accounts", async function () {
       await hardhatToken.transfer(addr1.address, 50);
       expect(await hardhatToken.balanceOf(addr1.address)).to.equal(50);
@@ -43,7 +43,7 @@ describe("MyToken", function () {
       );
     });
   });
-
+*/
   describe("Upgrade", function () {
     it("Upgrade TokenV2 contract to the proxy", async function () {
       await upgrades.deployProxy(TokenV2, { kind: "uups" });

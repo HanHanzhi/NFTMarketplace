@@ -4,15 +4,15 @@ import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-
+import "@opengsn/contracts/src/BaseRelayRecipient.sol";
 
 
 // This is the main building block for smart contracts.
-contract MyHardhatToken is Initializable, ERC20Upgradeable, UUPSUpgradeable, OwnableUpgradeable{
+contract MyHardhatToken is Initializable, ERC20Upgradeable, UUPSUpgradeable, OwnableUpgradeable, BaseRelayRecipient{
 	uint public val;
-	
-	
-
+	uint256 public counter;
+	event FlagCaptured(address previousHolder, address currentHolder);
+address public currentHolder = address(0);
 	function initialize() external initializer{
 		__ERC20_init("MyHardhatToken", "MHT");
 		__Ownable_init();
@@ -26,6 +26,12 @@ contract MyHardhatToken is Initializable, ERC20Upgradeable, UUPSUpgradeable, Own
 
 	
 	function _authorizeUpgrade(address) internal override onlyOwner {}
+
+	function increment() public {
+        counter++;
+        lastCaller = _msgSender();
+        emit Increment(_msgSender(), counter);
+    }
 
 }
 
