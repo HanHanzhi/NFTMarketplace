@@ -10,7 +10,7 @@ require("@nomiclabs/hardhat-etherscan");
 
 // Go to https://www.alchemyapi.io, sign up, create
 // a new App in its dashboard, and replace "KEY" with its key
-const ALCHEMY_API_KEY = "UTtJiBT_TnuDzEZyEW43oSikFpy_6_Tw";
+const ALCHEMY_API_KEY = "qvvL1wGYBIss_r6DxcOjAOP2rNcrbv_7";
 
 // Replace this private key with your Ropsten account private key
 // To export your private key from Metamask, open Metamask and
@@ -26,6 +26,10 @@ module.exports = {
   networks: {
     ropsten: {
       url: `https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
+      accounts: [`${ROPSTEN_PRIVATE_KEY}`],
+    },
+    goerli: {
+      url: `https://eth-goerli.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
       accounts: [`${ROPSTEN_PRIVATE_KEY}`],
     },
   },
