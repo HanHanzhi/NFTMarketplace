@@ -134,6 +134,16 @@
       "address": "0x724A0b8b12c8953767B00Ca22ef7D3Ea5B21dDCe",
       "txHash": "0xc7e6e308a61971ae33e5c31990c73b3510c0508fb21b28f27a3b164e8666b199",
       "kind": "uups"
+    },
+    {
+      "address": "0xDd2a4900A92728BcAa85c6cD9Cf5d57608E89FeA",
+      "txHash": "0x02ac879f0a84aaf213045f5c0c8a3d59ec4ea0f242d2a59b8438785d44f560ab",
+      "kind": "uups"
+    },
+    {
+      "address": "0x0Cb700556497ac8479C15B8b27DB3B73C32Ac45b",
+      "txHash": "0xd9f9ddc127ba917880c1d4674feb60f520c4c0a6a1c5d737a78ce89522e42713",
+      "kind": "uups"
     }
   ],
   "impls": {
@@ -1020,7 +1030,7 @@
             "slot": "251",
             "type": "t_uint256",
             "contract": "MyHardhatToken",
-            "src": "contracts/MyHardhatToken.sol:12"
+            "src": "contracts/MyHardhatToken.sol:14"
           }
         ],
         "types": {
