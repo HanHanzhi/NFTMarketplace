@@ -1,11 +1,10 @@
-pragma solidity ^0.8.10;
+pragma solidity ^0.8.2;
 
 import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import "@openzeppelin/contracts/metatx/ERC2771Context.sol";
-import "@opengsn/contracts/src/BaseRelayRecipient.sol";
 
 
 
@@ -30,6 +29,27 @@ contract MyHardhatToken is Initializable, ERC20Upgradeable, UUPSUpgradeable, Own
 	function _authorizeUpgrade(address) internal override onlyOwner {}
 
 	
+
+}
+
+contract MyHardhatTokenNFT is Initializable, ERC721Upgradeable,UUPSUpgradeable,OwnableUpgradeable {
+	uint public val;
+	
+	
+
+	function initialize() external initializer{
+		__ERC721_init("MyHardhatTokenNFT", "NFT");
+		__Ownable_init();
+		__UUPSUpgradeable_init();
+		_mint(msg.sender,321*10**18);
+		
+	}
+	
+	/// @custom:oz-upgrades-unsafe-allow constructor
+	constructor() initializer {}
+
+	
+	function _authorizeUpgrade(address) internal override onlyOwner {}
 
 }
 
