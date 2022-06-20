@@ -144,6 +144,11 @@
       "address": "0x0Cb700556497ac8479C15B8b27DB3B73C32Ac45b",
       "txHash": "0xd9f9ddc127ba917880c1d4674feb60f520c4c0a6a1c5d737a78ce89522e42713",
       "kind": "uups"
+    },
+    {
+      "address": "0xA5CbB75c5369B9B948C92bEF5eD969e891b8C2c2",
+      "txHash": "0x697be2d1dc18b0d1a0edb614554784816fc11054f88c118828e8539bb5cbd9ed",
+      "kind": "uups"
     }
   ],
   "impls": {
