@@ -1,25 +1,35 @@
-const { ethers, upgrades } = require("hardhat");
+const { utils } = require("ethers");
+
 async function main() {
-  const [deployer] = await ethers.getSigners();
+  const baseTokenURI = "ipfs://QmZbWNKJPAjxXuNFSEaksCJVd1M6DaKQViJBYPK2BdpDEP/";
 
-  console.log("Deploying NFT contracts with the account:", deployer.address);
+  // Get owner/deployer's wallet address
+  const [owner] = await hre.ethers.getSigners();
 
-  const weiAmount = (await deployer.getBalance()).toString();
+  // Get contract that we want to deploy
+  const contractFactory = await hre.ethers.getContractFactory("NFTCollectible");
 
-  console.log(
-    "Account Eth balance:",
-    await ethers.utils.formatEther(weiAmount)
-  );
+  // Deploy contract with the correct constructor arguments
+  const contract = await contractFactory.deploy(baseTokenURI);
 
-  const Token = await ethers.getContractFactory("MyHardhatTokenNFT");
+  // Wait for this transaction to be mined
+  await contract.deployed();
 
-  const token = await upgrades.deployProxy(Token, [], {
-    initializer: "initialize",
-  });
+  // Get contract address
+  console.log("Contract deployed to:", contract.address);
 
-  await token.deployed();
+  // Reserve NFTs
+  let txn = await contract.reserveNFTs();
+  await txn.wait();
+  console.log("10 NFTs have been reserved");
 
-  console.log("Token address:", token.address);
+  // Mint 3 NFTs by sending 0.03 ether
+  txn = await contract.mintNFTs(3, { value: utils.parseEther("0.03") });
+  await txn.wait();
+
+  // Get all token IDs of the owner
+  let tokens = await contract.tokensOfOwner(owner.address);
+  console.log("Owner has tokens: ", tokens);
 }
 
 main()
