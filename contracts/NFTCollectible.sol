@@ -76,4 +76,12 @@ contract NFTCollectible is ERC721Enumerable, Ownable {
         (bool success, ) = (msg.sender).call{value: balance}("");
         require(success, "Transfer failed.");
     }
+    function transferNFTFrom(
+        address from,
+        address to,
+        uint256 tokenId
+    ) public virtual returns (bool) {
+        safeTransferFrom(from, to, tokenId);
+        return true;
+    }
 }
