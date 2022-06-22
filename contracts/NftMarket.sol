@@ -20,7 +20,8 @@ contract NFTMarket is IERC721Receiver{
         uint256 nftId,
         address mintedBy,
         address currentBidOwner,
-        uint256 currentBidPrice
+        uint256 currentBidPrice,
+        uint256 bidCount
     );
 
     function onERC721Received(
@@ -48,6 +49,7 @@ contract NFTMarket is IERC721Receiver{
         address creator; // Creator of the Auction
         address payable currentBidOwner; // Address of the highest bider
         uint256 currentBidPrice; // Current highest bid for the auction
+        uint256 bidCount;
         
     }
     Auction[] private allAuctions;
@@ -73,7 +75,7 @@ contract NFTMarket is IERC721Receiver{
             "Caller is not the owner of the NFT"
         );
         require(nftCollection.transferNFTFrom(msg.sender, address(this), _nftId));
-        address payable currentBidOwner = payable(address(this));
+        address payable currentBidOwner = payable(address(0));
         // Create new Auction object
         Auction memory newAuction = Auction({
             index: index,
@@ -82,7 +84,8 @@ contract NFTMarket is IERC721Receiver{
             nftId: _nftId,
             creator: msg.sender,
             currentBidOwner: currentBidOwner,
-            currentBidPrice: _initialBid
+            currentBidPrice: _initialBid,
+            bidCount: 0
             
         });
         allAuctions.push(newAuction);
@@ -94,7 +97,8 @@ contract NFTMarket is IERC721Receiver{
             _nftId,
             msg.sender,
             currentBidOwner,
-            _initialBid
+            _initialBid,
+            0
             
         );
         return index;
@@ -147,13 +151,19 @@ contract NFTMarket is IERC721Receiver{
 
         
         
-        paymentToken.transfer(auction.currentBidOwner,auction.currentBidPrice);
+        if (auction.bidCount > 0) {
+            paymentToken.transfer(
+                auction.currentBidOwner,
+                auction.currentBidPrice
+            );
+        }
         
 
         
         address payable newBidOwner = payable(msg.sender);
         auction.currentBidOwner = newBidOwner;
         auction.currentBidPrice = _newBid;
+        auction.bidCount++;
         
 
 
