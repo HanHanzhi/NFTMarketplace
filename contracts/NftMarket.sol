@@ -181,6 +181,12 @@ contract NFTMarket is IERC721Receiver{
                 _auctionIndex
             )
         );
+
+        MyHardhatToken paymentToken = MyHardhatToken(auction.addressPaymentToken);
+        
+        require(
+            paymentToken.transfer(auction.creator, auction.currentBidPrice)
+        );
     }
 
 
